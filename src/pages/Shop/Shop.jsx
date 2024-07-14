@@ -1,23 +1,18 @@
 import React from "react";
-import "./shop.css";
 import { PRODUCTS } from "../../Products";
 import Product from "./Product";
+import "./shop.css";
 
 const Shop = () => {
   return (
     <div className="shop">
       <div className="shopTitle">
-        <h1>G3RGES Shop</h1>
+        <h1>PedroTech Shop</h1>
       </div>
 
       <div className="products">
         {PRODUCTS.map((product) => (
-          <Product
-            key={product.id}
-            name={product.productName}
-            price={product.price}
-            image={product.productImage}
-          />
+          <Product data={product} key={product.id} />
         ))}
       </div>
     </div>
